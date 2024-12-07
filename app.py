@@ -18,7 +18,7 @@ if hist_button: # al hacer clic en el botón
 
 disper_button = st.button('Construir Grafico Dispersion') # crear un botón
 
-if hist_button: # al hacer clic en el botón
+if disper_button: # al hacer clic en el botón
             # escribir un mensaje
     st.write('Creación de un grafico de dispesion sobre conjunto de datos de anuncios de venta de coches')
     # crear un histograma
