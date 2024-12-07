@@ -11,6 +11,19 @@ if hist_button: # al hacer clic en el botón
             # escribir un mensaje
     st.write('Creación de un histograma para el conjunto de datos de anuncios de venta de coches')
     # crear un histograma
-    fig = px.histogram(car_data, x="odometer")
+    fig = px.histogram(car_data, x="model_year", 
+                   title="Autos posteados por año de modelo", )
             # mostrar un gráfico Plotly interactivo
     st.plotly_chart(fig, use_container_width=True)
+
+disper_button = st.button('Construir Grafico Dispersion') # crear un botón
+
+if hist_button: # al hacer clic en el botón
+            # escribir un mensaje
+    st.write('Creación de un grafico de dispesion sobre conjunto de datos de anuncios de venta de coches')
+    # crear un histograma
+    fig = px.scatter(car_data, x="odometer", y="price", 
+                     title="Precio de vehiculos por kilometraje") # crear un gráfico de dispersión
+    st.plotly_chart(fig, use_container_width=True)
+ 
+
